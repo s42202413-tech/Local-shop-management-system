@@ -1,0 +1,74 @@
+# Simple Local Management System (CLI)
+# Features: Add, View, Search, Delete records
+
+records = []
+
+# Function to add a record
+def add_record():
+    name = input("Enter name: ")
+    age = input("Enter age: ")
+    address = input("Enter address: ")
+    record = {"name": name, "age": age, "address": address}
+    records.append(record)
+    print("Record added successfully!\n")
+
+# Function to view all records
+def view_records():
+    if not records:
+        print("No records found.\n")
+        return
+    for i, record in enumerate(records, start=1):
+        print(f"{i}. Name: {record['name']}, Age: {record['age']}, Address: {record['address']}")
+    print()
+
+# Function to search for a record
+def search_record():
+    name = input("Enter name to search: ")
+    found = False
+    for record in records:
+        if record['name'].lower() == name.lower():
+            print(f"Found -> Name: {record['name']}, Age: {record['age']}, Address: {record['address']}")
+            found = True
+    if not found:
+        print("Record not found.")
+    print()
+
+# Function to delete a record
+def delete_record():
+    name = input("Enter name to delete: ")
+    global records
+    new_records = [r for r in records if r['name'].lower() != name.lower()]
+    if len(new_records) == len(records):
+        print("Record not found.\n")
+    else:
+        records = new_records
+        print("Record deleted successfully!\n")
+
+# Main menu loop
+def main():
+    while True:
+        print("===== Local Management System =====")
+        print("1. Add Record")
+        print("2. View Records")
+        print("3. Search Record")
+        print("4. Delete Record")
+        print("5. Exit")
+
+        choice = input("Enter your choice: ")
+
+        if choice == '1':
+            add_record()
+        elif choice == '2':
+            view_records()
+        elif choice == '3':
+            search_record()
+        elif choice == '4':
+            delete_record()
+        elif choice == '5':
+            print("Exiting system...")
+            break
+        else:
+            print("Invalid choice. Try again.\n")
+
+if __name__ == "__main__":
+    main()
