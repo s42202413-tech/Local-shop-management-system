@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Local Shop Management System</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background: #2c3e50;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    nav {
+        background: #34495e;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 15px;
+        font-weight: bold;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .card {
+        background: white;
+        padding: 20px;
+        margin: 15px 0;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+    }
+
+    table, th, td {
+        border: 1px solid #ddd;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: center;
+    }
+
+    th {
+        background: #3498db;
+        color: white;
+    }
+
+    footer {
+        background: #2c3e50;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    button {
+        background: #27ae60;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    button:hover {
+        background: #219150;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Local Shop Management System</h1>
+    <p>Manage Products, Sales, Customers & Inventory</p>
+</header>
+
+<nav>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#products">Products</a>
+    <a href="#sales">Sales</a>
+    <a href="#customers">Customers</a>
+</nav>
+
+<section id="dashboard">
+    <div class="card">
+        <h2>Dashboard</h2>
+        <p>Total Products: 120</p>
+        <p>Total Sales Today: $450</p>
+        <p>Customers: 35</p>
+    </div>
+</section>
+
+<section id="products">
+    <div class="card">
+        <h2>Product List</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Rice</td>
+                <td>$20</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Sugar</td>
+                <td>$15</td>
+                <td>40</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Soap</td>
+                <td>$5</td>
+                <td>100</td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="sales">
+    <div class="card">
+        <h2>Sales</h2>
+        <p>Recent Sale: Rice x2 = $40</p>
+        <button onclick="alert('New Sale Added!')">Add Sale</button>
+    </div>
+</section>
+
+<section id="customers">
+    <div class="card">
+        <h2>Customers</h2>
+        <p>Customer Name: John Doe</p>
+        <p>Phone: +123456789</p>
+        <button onclick="alert('Customer Added!')">Add Customer</button>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Local Shop Management System</p>
+</footer>
+
+</body>
+</html>
