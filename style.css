@@ -1,1 +1,171 @@
+/* ====================================
+   Local Shop Management System
+   style.css
+==================================== */
 
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Body */
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
+    color:#333;
+}
+
+/* Header */
+header{
+    background:#2c3e50;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+header h1{
+    font-size:32px;
+    margin-bottom:5px;
+}
+
+/* Navigation */
+nav{
+    background:#34495e;
+    padding:12px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-size:18px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#1abc9c;
+}
+
+/* Container */
+.container{
+    width:90%;
+    margin:auto;
+    padding:20px;
+}
+
+/* Cards */
+.card{
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Dashboard */
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+}
+
+.box{
+    background:#3498db;
+    color:white;
+    padding:20px;
+    text-align:center;
+    border-radius:10px;
+}
+
+.box h2{
+    font-size:28px;
+}
+
+/* Forms */
+input,
+select,
+button{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border-radius:5px;
+    border:1px solid #ccc;
+    font-size:16px;
+}
+
+button{
+    background:#27ae60;
+    color:white;
+    border:none;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#219150;
+}
+
+/* Tables */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+
+table th,
+table td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:center;
+}
+
+table th{
+    background:#2980b9;
+    color:white;
+}
+
+table tr:nth-child(even){
+    background:#f9f9f9;
+}
+
+table tr:hover{
+    background:#ecf0f1;
+}
+
+/* Search Box */
+.search-box{
+    margin-bottom:15px;
+}
+
+/* Footer */
+footer{
+    background:#2c3e50;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    nav a{
+        display:block;
+        margin:10px 0;
+    }
+
+    .dashboard{
+        grid-template-columns:1fr;
+    }
+
+    table{
+        font-size:14px;
+    }
+
+    header h1{
+        font-size:24px;
+    }
+}
